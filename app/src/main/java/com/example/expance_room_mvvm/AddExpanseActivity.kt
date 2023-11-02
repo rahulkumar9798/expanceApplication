@@ -17,7 +17,7 @@ class AddExpanseActivity : AppCompatActivity() {
         binding = ActivityAddExpanseBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val dropDownList = listOf("Credit", "Debit")
+        val dropDownList = listOf( "Credit", "Debit")
         val adpter = ArrayAdapter(this, R.layout.dropdown_list, dropDownList)
 
         binding.dropdownMenu.setAdapter(adpter)
