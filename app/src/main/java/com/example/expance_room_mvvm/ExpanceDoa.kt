@@ -18,10 +18,10 @@ interface ExpanceDoa {
     fun getAllExpance(): List<ExpanceTable>
 
     @Update
-    fun updateExpance(newExpance : ExpanceTable)
+    fun updateExpance(updateExpance : ExpanceTable)
 
     @Delete
-    fun deleteExpance(newExpance : ExpanceTable)
+    fun deleteExpance(deleteExpance : ExpanceTable)
 
 
 }
