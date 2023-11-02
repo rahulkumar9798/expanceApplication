@@ -51,6 +51,8 @@
         android:hint="    Enter your Description"
         android:padding="11dp"/>
 
+
+
     <EditText
         android:id="@+id/edtAmount"
         android:layout_width="match_parent"
@@ -60,7 +62,9 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/custome_edit_text"
         android:inputType="number"
+        android:textStyle="bold"
         android:drawablePadding="11dp"
+        android:drawableLeft="@drawable/baseline_currency_rupee_24"
         android:hint="    Enter your Amount"
         android:padding="11dp"/>
 
