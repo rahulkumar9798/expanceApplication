@@ -6,12 +6,12 @@ class CategoryRepository(val db : MyRoomDataBase) {
         db.CategaryDao().addCategory(newCategory)
     }
 
-    fun getAllCategory() : List<ExpanceTable>{
-        return db.ExpanceDoa().getAllExpance()
+    fun getAllCategory() : List<CategoryTable>{
+        return db.CategaryDao().getAllCategory()
     }
 
 
-    fun updateCategory(updateCategory : ExpanceTable){
+    fun updateCategory(updateCategory : CategoryTable){
 
     }
 

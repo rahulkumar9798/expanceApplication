@@ -24,6 +24,7 @@ class RecyclerMainAdpter(val context: Context, val arrData: ArrayList<MainModel>
         holder.binding.txtDate.text = arrData[position].date
         holder.binding.txtAmt.text = arrData[position].amt
         holder.binding.RecySeccondryView.layoutManager = LinearLayoutManager(context)
-        holder.binding.RecySeccondryView.adapter = RecyclerSecondaryAdpter(context, arrData[position].listSecondry)
+        //holder.binding.RecySeccondryView.adapter = RecyclerSecondaryAdpter(context, arrData[position].listSecondry)
+        holder.binding.RecySeccondryView.adapter = RecyclerSecondaryAdpter(context, arrData[position].listExpanse)
     }
 }

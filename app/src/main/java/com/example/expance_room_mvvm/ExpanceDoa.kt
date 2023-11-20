@@ -1,5 +1,6 @@
 package com.example.expance_room_mvvm
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
@@ -15,7 +16,7 @@ interface ExpanceDoa {
     fun addExpance(newExpance : ExpanceTable)
 
     @Query("select * from expance")
-    fun getAllExpance(): List<ExpanceTable>
+    fun getAllExpance(): LiveData<List<ExpanceTable>>
 
     @Update
     fun updateExpance(updateExpance : ExpanceTable)

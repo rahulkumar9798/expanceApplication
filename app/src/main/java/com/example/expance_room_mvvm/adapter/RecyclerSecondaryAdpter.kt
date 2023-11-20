@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.expance_room_mvvm.databinding.SecondryRowBinding
 
-class RecyclerSecondaryAdpter(val context: Context, val arrSecondryData : ArrayList<SecondaryModal>): RecyclerView.Adapter<RecyclerSecondaryAdpter.ViewHolder>(){
+class RecyclerSecondaryAdpter(val context: Context, val arrSecondryData : ArrayList<ExpanceTable>): RecyclerView.Adapter<RecyclerSecondaryAdpter.ViewHolder>(){
     class ViewHolder (val binding: SecondryRowBinding) : RecyclerView.ViewHolder(binding.root){
 
     }
@@ -21,11 +21,18 @@ class RecyclerSecondaryAdpter(val context: Context, val arrSecondryData : ArrayL
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder.binding){
-            imgCat.setImageResource(arrSecondryData[position].imgPath)
+            //imgCat.setImageResource(arrSecondryData[position].)
+
+            for (eachCat in AddExpanseActivity.arrData){
+                if (eachCat.catId== arrSecondryData[position].catId.toInt()){
+                    imgCat.setImageResource(eachCat.imgPath)
+                }
+            }
             txtName.text = arrSecondryData[position].title
-            txtDese.text =  arrSecondryData[position].des
-            txtAmt.text = arrSecondryData[position].amt
-            txtTotalAmt.text = arrSecondryData[position].totalAmt
+            txtDese.text =  arrSecondryData[position].desc
+            txtAmt.text = arrSecondryData[position].amount
+            txtTotalAmt.text = "\u20B9 ${arrSecondryData[position].balance}"
+            /* txtTotalAmt.text = arrSecondryData[position].amount*/
         }
     }
 

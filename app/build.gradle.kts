@@ -54,4 +54,7 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:2.6.0")
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:2.6.0")
+
+    //graph
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
 }

@@ -7,12 +7,11 @@ import androidx.room.PrimaryKey
 data class ExpanceTable(
     @PrimaryKey(autoGenerate = true)
     val id : Int,
-
-
     val title : String,
     val desc: String,
-    val amoount: String,
+    val amount: String,
+    val balance : String,
     val date: String,
-    val addCatorgy: String,
-    val amtExpance: String
+    val catId: String,
+    val type : String
 )

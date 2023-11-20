@@ -19,7 +19,7 @@ abstract class MyRoomDataBase(): RoomDatabase(){
            var DB_INSTANCE : MyRoomDataBase?=null
 
 
-            fun getIntance(context: Context) : RoomDatabase{
+            fun getIntance(context: Context) : MyRoomDataBase{
                 if (DB_INSTANCE == null){
                     DB_INSTANCE = Room.databaseBuilder(context,
                         MyRoomDataBase::class.java,
